@@ -1,0 +1,23 @@
+return {
+	on = {
+		devices = {20}, 
+		timer = {},
+		variables = {},
+		scenes = {},
+		groups = {},
+		security = {},
+		httpResponses = {}
+	},
+	data = {},
+	logger = {},
+	execute = function(domoticz, triggeredItem)
+	    
+	    switch = domoticz.devices(17) -- IsOfficeHeatingEnabled
+	   
+	    if(not switch.active) then
+	        	    switch.switchOn()
+	        end
+
+
+	end
+}
