@@ -1,0 +1,34 @@
+On System#Boot do    	
+  gpio,13,0		
+  timerSet,1,1	
+endon
+On Rules#Timer=1 do  
+ gpio,13,1
+ timerSet,2,1
+endon
+On Rules#Timer=2 do  
+ gpio,13,0
+ timerSet,1,1  
+endon
+
+on WiFi#Connected do
+gpio,13,1
+timerSet,1,0
+timerSet,2,0
+endon
+
+on Wifi#Disconnected do
+gpio,13,0	
+  timerSet,1,1
+endon
+
+on sON do
+gpio,12,1
+gpio,13,0
+endon
+
+on sOFF do
+gpio,12,0
+gpio,13,1
+endon
+
