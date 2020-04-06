@@ -1,0 +1,51 @@
+return {
+	on = {
+		devices = {3,5,4,12,13,15},
+		timer = {},
+		variables = {},
+		scenes = {},
+		groups = {},
+		security = {},
+		httpResponses = {}
+	},
+	data = {},
+	logger = {},
+	execute = function(domoticz, triggeredItem)
+        termostat = domoticz.devices(3)
+        temp = domoticz.devices(5)
+        switch = domoticz.devices(1)
+        onoff = domoticz.devices(4)
+        button = domoticz.devices(12)
+        geo = domoticz.devices(13)
+        geoActive = domoticz.devices(15)
+        margin = 0.25
+        
+        geoStatus = false
+  
+  
+        if(geoActive.active and geo.active) then
+            geoStatus = true
+        elseif(not geoActive.active) then
+            geoStatus = true
+        else
+            geoStatus = false
+        end
+            
+        
+        if(onoff.active and geoStatus and not button.active) then
+            
+            if(temp.temperature <= termostat.setPoint ) then
+                switch.switchOn()
+            elseif(temp.temperature > (termostat.setPoint + margin)) then
+                switch.switchOff()
+            end
+            
+        elseif(button.active) then    
+        switch.switchOn()
+            
+            else
+            switch.switchOff()
+        end
+
+	end
+}
