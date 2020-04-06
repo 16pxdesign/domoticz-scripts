@@ -1,0 +1,42 @@
+return {
+	on = {
+		devices = {3,2,4,12},
+		timer = {},
+		variables = {},
+		scenes = {},
+		groups = {},
+		security = {},
+		httpResponses = {}
+	},
+	data = {},
+	logger = {},
+	execute = function(domoticz, item)
+        termostat = domoticz.devices(3) --BedroomThermostatSet
+        temp = domoticz.devices(2) --Bedroom-Temperature
+        switch = domoticz.devices(1) --HeaterBedroomRelayStatus
+        onoff = domoticz.devices(4) --IsBedroomHeatingEnabled	
+        button = domoticz.devices(12) --IsBedroomHeatingRelayButtonActive	
+        margin = 0.25 -- +/- temperature
+        
+        
+        --check for geoStatus and is buton on
+        if(onoff.active and not button.active) then
+            
+            --on/off depending on temperature
+            if(temp.temperature <= termostat.setPoint ) then
+                switch.switchOn()
+            elseif(temp.temperature > (termostat.setPoint + margin)) then
+                switch.switchOff()
+            end
+        
+        --if button active switch on heater    
+        elseif(button.active) then    
+            switch.switchOn()
+            
+        --switch off on else
+        else
+            switch.switchOff()
+        end
+
+	end
+}
