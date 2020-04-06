@@ -1,0 +1,22 @@
+states
+	1	Heater-Relays	00014051	1	Heater-Bedroom	Light/Switch	Switch	Off	-	-	   	2020-04-06 20:33:04
+		2	Temperature-Sensors	14052	1	Temperature-Bedroom	Temp + Humidity	THGN122/123/132, THGR122/228/238/268	19.9 C, 43 %	9	-	   	2020-04-06 20:32:59
+		3	Termostat	0014053	1	Bedroom-Thermostat	Thermostat	SetPoint	19.0	-	-	   	2020-04-06 17:19:19
+		4	Termostat	00014054	1	Bedroom-Thermostat-Switch	Light/Switch	Switch	On	-	-	   	2020-03-28 00:42:23
+		5	Termostat	14055	1	Bedroom-Feeling-Temperature	Temp	LaCrosse TX3	19.3 C	-	-	   	2020-04-06 20:32:59
+		6	Weather	0001	1	Outside-Temp-Hum	Temp + Humidity + Baro	THB1 - BTHR918, BTHGN129	8.4 C, 66 %, 1020 hPa	-	-	   	2020-04-06 20:31:32
+		7	Weather	0001	0	Outside-wind	Wind	TFA	248.00;WSW;47;64;8.4;5.7	-	-	   	2020-04-06 20:31:32
+		8	Weather	0001	0	Outside-UV	UV	UVN128,UV138	0.0 UVI	-	-	   	2020-04-06 20:31:32
+		9	Weather	0001	0	Outside-rain	Rain	Unknown	0;0.8	-	-	   	2020-04-06 20:31:32
+		10	Weather	0	1	Outside-visibility	General	Visibility	16.1 km	-	-	   	2020-04-06 20:31:32
+		11	Weather	00000100	1	Outside-Ozone	General	Custom Sensor	362.2 DU	-	-	   	2020-04-06 20:31:32
+		12	Heater-Relays	0001405C	1	Bedroom-Heater-Button	Light/Switch	Switch	Off	-	-	   	2020-04-04 22:35:24
+		13	Geo	0001405D	1	Position	Light/Switch	Switch	On	-	-	   	2020-04-05 20:57:06
+		14	Temperature-Sensors	1405E	1	ROOM2-temp-sensor	Temp + Humidity	THGN122/123/132, THGR122/228/238/268	17.4 C, 65 %	8	-	   	2020-03-27 04:33:02
+		15	Geo	0001405F	1	ActiveGeo	Light/Switch	Switch	Off	-	-	   	2019-11-23 19:34:39
+		16	Temperature-Sensors	14060	1	Bedroom-Sensor-2-Table	Temp + Humidity	THGN122/123/132, THGR122/228/238/268	23.5 C, 45 %	8	-	   	2020-03-18 15:02:15
+		17	Heater-Relays	00014061	1	Mat	Light/Switch	Switch	Off	-	-	   	2019-11-29 09:12:40
+		18	Termostat	00014062	1	Mata-Switch	Light/Switch	Switch	Off	-	-	   	2019-11-27 22:48:40
+		19	Heater-Relays	00014063	1	ROOM2_Test	Light/Switch	Switch	Off	-	-	   	2020-04-06 20:33:02
+		20	Termostat	0014064	1	ROOM2_termostat_test	Thermostat	SetPoint	18.0	-	-	   	2020-02-09 05:53:35
+		21	Temperature-Sensors	14065	1	livingroom-temperature	Temp + Humidity	THGN122/123/132, THGR122/228/238/268	24.4 C, 38 %	8	-	   	2020-03-24 06:17:12
